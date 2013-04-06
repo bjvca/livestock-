@@ -1,0 +1,1155 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename ../../grameen/doc/ifpri_logo.jpeg
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Policy options for reducing vulnerability in conflict-prone areas: Livestock
+ market dynamics in pastoralist areas of Ethiopia
+\end_layout
+
+\begin_layout Author
+Bjorn Van Campenhout, Derek Headey and Bart Minten
+\end_layout
+
+\begin_layout Abstract
+The very nature of pastoralist livelihoods in the Arid and Semi Arid Lands
+ (asal) means exposure to substantial vulnerability.
+ Cattle, the main productive asset doubles as a store of wealth.
+ As such, the buffer stock provided by wealth can not be used as insurance
+ against adverse shocks that affect productive assets.
+ This vulnerability could be reduced substantially through monetization
+ of parstoralist livelihoods.
+ Indeed, over the last decades, there are signs that some markets that focus
+ on live cattle export to Sudan and further to the Arabian peninsula have
+ been booming.
+ Still, the majority of pastoralists' interactions with the market remains
+ low, with frequency and timing determined by immediate cash needs.
+ We look at what structural factors are responsible for the growth of the
+ export markets, and ask if lessons can be learned to increase market participat
+ion in poorly integrated pastoralist systems.
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Section*
+Market Integration - Concept and Methods
+\end_layout
+
+\begin_layout Standard
+The basic idea behind spatial market integration is discussed in the classical
+ works of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "takayama1971spatial"
+
+\end_inset
+
+.
+ This theory boils down that the fact that, in a setting with free flow
+ of information and goods, prices of a homogeneous good in two spatially
+ separated markets should only differ by the transaction cost
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Transaction cost should be broadly defined.
+ While transportation costs are obvious, transaction costs may also include
+ non-tariff barriers, search costs,...
+\end_layout
+
+\end_inset
+
+.
+ This is so because, if the price in one market is larger than the price
+ in another market plus the transaction cost that would be involved if one
+ had to move the product from the market with the low price to the market
+ with the high price, unexploited profits would exist.
+ Rational traders would therefore enter the market and capitalize on these
+ arbitrage opportunities, increasing demand in the market where prices are
+ low and increasing supply in the location where prices are high.
+ These latter two forces will, 
+\emph on
+ceteris paribus
+\emph default
+, drive up the price in the market that had initially a low price and reduce
+ the price in the market that had initially a high price.
+ The end result will be that prices adjust up to the point where trade becomes
+ unprofitable again, i.e.
+ until the price difference becomes equal to the transaction cost.
+\end_layout
+
+\begin_layout Standard
+Defined as above, one would need to compare the price margins with the cost
+ of transaction to makes statements on the extent of market integration.
+ However, this comparison is difficult due to the fact that transaction
+ costs incorporate a sizable unmeasured (and often unmeasurable) component,
+ such as the cost of risk related to contract monitoring, enforcement, search
+ costs, etc 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NewEntry7"
+
+\end_inset
+
+.
+ But the above also suggests that one can assess the degree of market interconne
+ctedness by looking at the behavior of prices of a homogeneous good in different
+ markets.
+ Hence, the first studies on market integration looked at simple correlations
+ between prices of a homogeneous good in different markets.
+ Realizing that most price series are non-stationary, market integration
+ became synonymous to co-integration of price series in the 1980s and 1990s.
+ However, the non-linear adjustment process of prices, with adjustment of
+ prices different depending on the price margin larger or smaller than the
+ transaction cost, resulted in low power of co-integration tests.
+ Currently, there are two models in use that address this issue.
+ Models based on threshold auto-regression are close to the co-integration
+ and error-correction approach, but allow for a band formed by transaction
+ costs.
+ The Parity Bounds model estimates the probability of price differences
+ being below, on or above the transaction cost.
+\end_layout
+
+\begin_layout Standard
+Although a significant improvement over the models that disregarded transaction
+ cost, the PBM and TAR models have their shortcomings too.
+ A first criticism on the PBM concerns its underlying distributional assumptions.
+ The original model identifies three exhaustive regimes, based on the price
+ difference between two markets.
+ Either this price difference is equal to the transaction cost (regime 1),
+ above the transaction cost (regime 2) or below the transaction cost (regime
+ 3).
+ In the switching regressions model, regime 1 is modeled as a constant (i.e.
+ the transaction cost) plus a normally distributed error term.
+ For regime 2, an additional error term is added, while for regime 3, the
+ additional error term is subtracted.
+ This additional error term is assumed to be half normal distributed truncated
+ from below at zero.
+ After formulating the corresponding density functions for each regime,
+ probabilities are assigned to each regime, and the likelihood function
+ can be specified.
+ Maximizing the log of this function returns estimates for the probabilities
+ of being in one of the tree regimes, the transaction cost, and the standard
+ errors of both error terms 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New3"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, suppose the price difference between two markets falls in regime 2,
+ where it is larger than the transaction cost.
+ Indeed, in this case there are profitable arbitrage opportunities that
+ remain unexploited.
+ It seems logical here to assume a half-normal distribution, because the
+ probability of observing large deviations from the transaction cost is
+ lower than the probability of observing smaller deviations.
+ Obviously, economic reasoning suggests that in this regime, there are limits
+ at to how big the discrepancy between the price margin and the transaction
+ cost can become.
+ However, this is not necessarily true for regime 3.
+ If there is no trade between two markets because the price margin is lower
+ than the transaction cost, there is no reason why a smaller deviation from
+ the parity bounds should occur at a higher probability than a large deviation,
+ as suggested by the half normal distribution underlying the model.
+ One would expect that in this regime, any price difference has the same
+ probability of occurrence.
+ The story is somehow different if there is trade occurring in this regime.
+ In that case, it might be that temporarily, too much trade is going on.
+ These ‘errors’ will be corrected sooner or later; hence here a half normal
+ distribution seems to come closer to what economic theory predicts
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+It is important to note that the original model was developed with such
+ a market structure in mind.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "New3"
+
+\end_inset
+
+ were looking at two markets where one was indisputably the exporter and
+ the other the importer (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "New3"
+
+\end_inset
+
+,p.
+ 571).
+ They were looking at a situation of two markets that were linked by continuous
+ trade, and their interpretation was that regime 3 reflects a situation
+ where there is simply too much trade (glut).
+ Most other studies using the PBM have analyzes quite different market settings,
+ including situations where reversal of trade is likely.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The point made above is related to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fackler2001971"
+
+\end_inset
+
+, who argue that “[Switching regressions models] can be viewed as nothing
+ more than flexible models of the price spread distribution.
+ The believability of the regime interpretation rests very strongly on the
+ believability of the distributional assumptions (p.
+ 1012)”
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Although they argue that the distributional assumptions are arbitrary because
+ economic theory generally has little to say about the distribution, we
+ feel that theory does say something about the type of adjustment that can
+ be expected.
+\end_layout
+
+\end_inset
+
+.
+ As explained above, in a setting where markets are not logically linked
+ by continuous trade, there is no reason to assume any adjustment in regime
+ 3.
+\end_layout
+
+\begin_layout Standard
+The parity bounds model is also static in nature
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This problem has been acknowledged from the beginning.
+ For instance, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "New3"
+
+\end_inset
+
+ introduce some dynamics to their model by comparing the price of the exporting
+ market to the lagged price of the importing market.
+ However, this still not informs us on how persistent deviations from efficient
+ arbitrage are.
+\end_layout
+
+\end_inset
+
+.
+ It informs the researcher of the probabilities of being for instance off
+ the parity bounds, but does tell us anything about how persistent these
+ deviations from the equilibrium are.
+ As already pointed out by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ravallion1986testing"
+
+\end_inset
+
+, “in many settings it will be implausible that trade adjusts instantaneously
+ to spatial price differentials… But, given enough time, the short-run adjustmen
+ts might exhibit a pattern which converges to such an equilibrium (p.
+ 103)”.
+ Sluggishness in price adjustment, delays in transportation and expectations
+ formation under price uncertainty are mentioned as the prime causes for
+ these delays in price adjustment.
+ Indeed, one can imagine markets that are prone to frequent supply and demand
+ shocks.
+ Using a static model like the parity bounds model, one would observe a
+ high frequency of inefficient arbitrage (i.e.
+ too little or too much trade), and hence conclude that these markets are
+ poorly integrated.
+ If one would use a dynamic specification instead, one can assess the time
+ it takes for prices to adjust to one another.
+ If the price differences tend to be corrected quickly, one would come to
+ a different conclusion than the one obtained by the PBM.
+ 
+\end_layout
+
+\begin_layout Standard
+The TAR model has two main shortcomings.
+ First of all, there is the assumption that the transaction cost is constant
+ over time
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Strictly speaking, this is also a shortcoming in the switching regression
+ models that only rely on price data.
+ The subsequent PBM of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "baulch1997transfer"
+
+\end_inset
+
+ relies on exogenous transaction cost data, and hence is a level II study.
+ Similarly, one can also use transaction cost data in a TAR framework, which
+ would allow a less restrictive threshold model, but again, this would result
+ in a level II study.
+ As said above, this study will only be concerned what is possible within
+ the first level of studies.
+\end_layout
+
+\end_inset
+
+.
+ Another issue concerns inference on the threshold parameters.
+ Chan (1993) has shown that the asymptotic distribution of the threshold
+ parameter is neither normal nor nuisance parameter free, hence it is not
+ possible to obtain standard errors and confidence intervals.
+ Recurring to simulation based methods to obtain standard errors is not
+ feasible in practice, as the grid search involved in the estimation takes
+ too much time.
+ 
+\end_layout
+
+\begin_layout Section*
+The Model
+\end_layout
+
+\begin_layout Standard
+The model derives from a simple law of one price analysis.
+ According to the theory, prices of a homogeneous commodity in two locations
+ should not differ by more than the cost of moving the commodity from the
+ location where the commodity has the lowest price to the location where
+ the commodity has the highest price.
+ This cost of moving the commodity should be interpreted in a broad way,
+ incorporating for instance also the cost of insuring the goods, the cost
+ of the capital that is needed to carry out the operation, vehicles needed,
+ etc.
+ We will denote this total cost as the transaction cost.
+ For simplicity, we will assume that this transaction cost is symmetric,
+ meaning that it costs the same to ship goods from location A to B than
+ from B to A.
+ This would be the case if both locations are at the same altitude and back-load
+ing is not possible.
+\end_layout
+
+\begin_layout Standard
+If we define the price in market A of a commodity at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to be 
+\begin_inset Formula $P_{t}^{A}$
+\end_inset
+
+and the price of the same commodity in location B at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to be 
+\begin_inset Formula $P_{t}^{B}$
+\end_inset
+
+, the law of one price states that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert \leq TC
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $TC$
+\end_inset
+
+ denotes a constant transaction cost.
+ If this condition holds, we say markets are perfectly integrated.
+ However, the inequality will not hold exactly at all points in time.
+ As arbitrage is often a time consuming process, the degree of market integratio
+n will be less than perfect.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert \leq T_{t}+\epsilon_{t}
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $\epsilon\sim N\left(0,\sigma^{2}\right)$
+\end_inset
+
+.
+ Such a model can be written as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert =\begin{cases}
+\rho.\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert +\epsilon_{t\;}if & \left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert >\tau\\
+\epsilon_{t\;}if & \left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert \leq\tau
+\end{cases}\label{eq:tar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Searching for structural changes in transaction costs
+\end_layout
+
+\begin_layout Standard
+In this article, we will extend the TAR model such that we can use it to
+ look for structural changes in market integration.
+ This will necessitate us to make the parameters that jointly enable us
+ to judge the extent of market integration, the transaction cost and the
+ adjustment speed, a function of time.
+ 
+\end_layout
+
+\begin_layout Standard
+Most studies implement TAR models as a grid search using the residual sum
+ of squared errors as a criterion.
+ This means that the researcher needs to define a step value for the parameters
+ to be estimated.
+ For instance, if the transaction cost is modeled as a simple function of
+ time 
+\begin_inset Formula $\tau_{t}=\alpha+\beta t$
+\end_inset
+
+, then a two dimensional grid needs to be created, and for both 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+, minimum and maximum values should be defined, as well as steps.
+ 
+\end_layout
+
+\begin_layout Standard
+We will take a slightly different approach.
+ First of all, instead of taking the residual sum of squares as the criterion,
+ we will maximize the likelihood function of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tar"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is a highly erratic function and non-differentiable.
+ Differential Evolution methods optimize a problem by iteratively trying
+ to improve a candidate solution with regard to a given measure of quality.
+ Such methods are commonly known as metaheuristics as they make few or no
+ assumptions about the problem being optimized and can search very large
+ spaces of candidate solutions.
+ DE is used for multidimensional real-valued functions but does not use
+ the gradient of the problem being optimized, which means DE does not require
+ for the optimization problem to be differentiable as is required by classic
+ optimization methods such as gradient descent and quasi-newton methods.
+ DE can therefore also be used on optimization problems that are not even
+ continuous, are noisy, change over time, etc 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "diffev"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Data
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Map-with-locations"
+
+\end_inset
+
+ shows the markets that have been included in the analysis.
+\end_layout
+
+\begin_layout Standard
+Addis Ababa (A) actually masks 3 of the 4 official different livestock markets
+ in the capital.
+ Kara, in Yeka District, Kera, in Kirkos District; and Shegole livestock
+ market centre, located on Ambo Road, in Gullele District.
+ Further to the East is the livestock market of Were at about 265 km from
+ Addis.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename map.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Map with locations of selected markets
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Map-with-locations"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We decided to include the following markets in the anlysis
+\end_layout
+
+\begin_layout Section*
+Results
+\end_layout
+
+\begin_layout Subsection*
+Addis Ababa
+\end_layout
+
+\begin_layout Standard
+We start with the market configuration within Addis Ababa.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Market-configuration-in"
+
+\end_inset
+
+ shows the 4 different official livestock markets in the capital.
+ We do not have price data on market D.
+ Market A is Kara, market B is Shegole and C is Kera.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename addis.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Market configuration in Addis Ababa
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Market-configuration-in"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=FALSE, results=FALSE, warnings=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+load("/home/bjvca/data/data/livestock/analysis/output/resmat")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rho
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p-value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Loglik
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+distance
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kera - Kara
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,2,1], digits=3)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,2,2],digits=3)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,2,3],digits=1)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kera - Shegole
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,4,1], digits=3)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,4,2],digits=3)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,4,3],digits=1)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kara - Shegole
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[2,4,1], digits=3)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{sprintf("%1.3f", resmat[2,4,2])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[2,4,3],digits=1)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+results for addis AR1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Eastern Route
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename eastern route.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Eastern trade route
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "mi_livestock"
+options "chicago"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

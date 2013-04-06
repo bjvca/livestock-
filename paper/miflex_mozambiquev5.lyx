@@ -1,0 +1,3807 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename ../../grameen/doc/ifpri_logo.jpeg
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Livestock Market Dynamics in Ethiopia 
+\end_layout
+
+\begin_layout Author
+Bjorn Van Campenhout
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Section*
+Market Integration - Concept and Methods
+\end_layout
+
+\begin_layout Standard
+The basic idea behind spatial market integration is discussed in the classical
+ works of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "takayama1971spatial"
+
+\end_inset
+
+.
+ This theory boils down that the fact that, in a setting with free flow
+ of information and goods, prices of a homogeneous good in two spatially
+ separated markets should only differ by the transaction cost
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Transaction cost should be broadly defined.
+ While transportation costs are obvious, transaction costs may also include
+ non-tariff barriers, search costs,...
+\end_layout
+
+\end_inset
+
+.
+ This is so because, if the price in one market is larger than the price
+ in another market plus the transaction cost that would be involved if one
+ had to move the product from the market with the low price to the market
+ with the high price, unexploited profits would exist.
+ Rational traders would therefore enter the market and capitalize on these
+ arbitrage opportunities, increasing demand in the market where prices are
+ low and increasing supply in the location where prices are high.
+ These latter two forces will, 
+\emph on
+ceteris paribus
+\emph default
+, drive up the price in the market that had initially a low price and reduce
+ the price in the market that had initially a high price.
+ The end result will be that prices adjust up to the point where trade becomes
+ unprofitable again, i.e.
+ until the price difference becomes equal to the transaction cost.
+\end_layout
+
+\begin_layout Standard
+Defined as above, one would need to compare the price margins with the cost
+ of transaction to makes statements on the extent of market integration.
+ However, this comparison is difficult due to the fact that transaction
+ costs incorporate a sizable unmeasured (and often unmeasurable) component,
+ such as the cost of risk related to contract monitoring, enforcement, search
+ costs, etc 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NewEntry7"
+
+\end_inset
+
+.
+ But the above also suggests that one can assess the degree of market interconne
+ctedness by looking at the behavior of prices of a homogeneous good in different
+ markets.
+ Hence, the first studies on market integration looked at simple correlations
+ between prices of a homogeneous good in different markets.
+ Realizing that most price series are non-stationary, market integration
+ became synonymous to co-integration of price series in the 1980s and 1990s.
+ However, the non-linear adjustment process of prices, with adjustment of
+ prices different depending on the price margin larger or smaller than the
+ transaction cost, resulted in low power of co-integration tests.
+ Currently, there are two models in use that address this issue.
+ Models based on threshold auto-regression are close to the co-integration
+ and error-correction approach, but allow for a band formed by transaction
+ costs.
+ The Parity Bounds model estimates the probability of price differences
+ being below, on or above the transaction cost.
+\end_layout
+
+\begin_layout Standard
+Although a significant improvement over the models that disregarded transaction
+ cost, the PBM and TAR models have their shortcomings too.
+ A first criticism on the PBM concerns its underlying distributional assumptions.
+ The original model identifies three exhaustive regimes, based on the price
+ difference between two markets.
+ Either this price difference is equal to the transaction cost (regime 1),
+ above the transaction cost (regime 2) or below the transaction cost (regime
+ 3).
+ In the switching regressions model, regime 1 is modeled as a constant (i.e.
+ the transaction cost) plus a normally distributed error term.
+ For regime 2, an additional error term is added, while for regime 3, the
+ additional error term is subtracted.
+ This additional error term is assumed to be half normal distributed truncated
+ from below at zero.
+ After formulating the corresponding density functions for each regime,
+ probabilities are assigned to each regime, and the likelihood function
+ can be specified.
+ Maximizing the log of this function returns estimates for the probabilities
+ of being in one of the tree regimes, the transaction cost, and the standard
+ errors of both error terms 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New3"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, suppose the price difference between two markets falls in regime 2,
+ where it is larger than the transaction cost.
+ Indeed, in this case there are profitable arbitrage opportunities that
+ remain unexploited.
+ It seems logical here to assume a half-normal distribution, because the
+ probability of observing large deviations from the transaction cost is
+ lower than the probability of observing smaller deviations.
+ Obviously, economic reasoning suggests that in this regime, there are limits
+ at to how big the discrepancy between the price margin and the transaction
+ cost can become.
+ However, this is not necessarily true for regime 3.
+ If there is no trade between two markets because the price margin is lower
+ than the transaction cost, there is no reason why a smaller deviation from
+ the parity bounds should occur at a higher probability than a large deviation,
+ as suggested by the half normal distribution underlying the model.
+ One would expect that in this regime, any price difference has the same
+ probability of occurrence.
+ The story is somehow different if there is trade occurring in this regime.
+ In that case, it might be that temporarily, too much trade is going on.
+ These ‘errors’ will be corrected sooner or later; hence here a half normal
+ distribution seems to come closer to what economic theory predicts
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+It is important to note that the original model was developed with such
+ a market structure in mind.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "New3"
+
+\end_inset
+
+ were looking at two markets where one was indisputably the exporter and
+ the other the importer (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "New3"
+
+\end_inset
+
+,p.
+ 571).
+ They were looking at a situation of two markets that were linked by continuous
+ trade, and their interpretation was that regime 3 reflects a situation
+ where there is simply too much trade (glut).
+ Most other studies using the PBM have analyzes quite different market settings,
+ including situations where reversal of trade is likely.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The point made above is related to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fackler2001971"
+
+\end_inset
+
+, who argue that “[Switching regressions models] can be viewed as nothing
+ more than flexible models of the price spread distribution.
+ The believability of the regime interpretation rests very strongly on the
+ believability of the distributional assumptions (p.
+ 1012)”
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Although they argue that the distributional assumptions are arbitrary because
+ economic theory generally has little to say about the distribution, we
+ feel that theory does say something about the type of adjustment that can
+ be expected.
+\end_layout
+
+\end_inset
+
+.
+ As explained above, in a setting where markets are not logically linked
+ by continuous trade, there is no reason to assume any adjustment in regime
+ 3.
+\end_layout
+
+\begin_layout Standard
+The parity bounds model is also static in nature
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This problem has been acknowledged from the beginning.
+ For instance, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "New3"
+
+\end_inset
+
+ introduce some dynamics to their model by comparing the price of the exporting
+ market to the lagged price of the importing market.
+ However, this still not informs us on how persistent deviations from efficient
+ arbitrage are.
+\end_layout
+
+\end_inset
+
+.
+ It informs the researcher of the probabilities of being for instance off
+ the parity bounds, but does tell us anything about how persistent these
+ deviations from the equilibrium are.
+ As already pointed out by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ravallion1986testing"
+
+\end_inset
+
+, “in many settings it will be implausible that trade adjusts instantaneously
+ to spatial price differentials… But, given enough time, the short-run adjustmen
+ts might exhibit a pattern which converges to such an equilibrium (p.
+ 103)”.
+ Sluggishness in price adjustment, delays in transportation and expectations
+ formation under price uncertainty are mentioned as the prime causes for
+ these delays in price adjustment.
+ Indeed, one can imagine markets that are prone to frequent supply and demand
+ shocks.
+ Using a static model like the parity bounds model, one would observe a
+ high frequency of inefficient arbitrage (i.e.
+ too little or too much trade), and hence conclude that these markets are
+ poorly integrated.
+ If one would use a dynamic specification instead, one can assess the time
+ it takes for prices to adjust to one another.
+ If the price differences tend to be corrected quickly, one would come to
+ a different conclusion than the one obtained by the PBM.
+ 
+\end_layout
+
+\begin_layout Standard
+The TAR model has two main shortcomings.
+ First of all, there is the assumption that the transaction cost is constant
+ over time
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Strictly speaking, this is also a shortcoming in the switching regression
+ models that only rely on price data.
+ The subsequent PBM of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "baulch1997transfer"
+
+\end_inset
+
+ relies on exogenous transaction cost data, and hence is a level II study.
+ Similarly, one can also use transaction cost data in a TAR framework, which
+ would allow a less restrictive threshold model, but again, this would result
+ in a level II study.
+ As said above, this study will only be concerned what is possible within
+ the first level of studies.
+\end_layout
+
+\end_inset
+
+.
+ Another issue concerns inference on the threshold parameters.
+ Chan (1993) has shown that the asymptotic distribution of the threshold
+ parameter is neither normal nor nuisance parameter free, hence it is not
+ possible to obtain standard errors and confidence intervals.
+ Recurring to simulation based methods to obtain standard errors is not
+ feasible in practice, as the grid search involved in the estimation takes
+ too much time.
+ 
+\end_layout
+
+\begin_layout Section*
+The Model
+\end_layout
+
+\begin_layout Standard
+The model derives from a simple law of one price analysis.
+ According to the theory, prices of a homogeneous commodity in two locations
+ should not differ by more than the cost of moving the commodity from the
+ location where the commodity has the lowest price to the location where
+ the commodity has the highest price.
+ This cost of moving the commodity should be interpreted in a broad way,
+ incorporating for instance also the cost of insuring the goods, the cost
+ of the capital that is needed to carry out the operation, vehicles needed,
+ etc.
+ We will denote this total cost as the transaction cost.
+ For simplicity, we will assume that this transaction cost is symmetric,
+ meaning that it costs the same to ship goods from location A to B than
+ from B to A.
+ This would be the case if both locations are at the same altitude and back-load
+ing is not possible.
+\end_layout
+
+\begin_layout Standard
+If we define the price in market A of a commodity at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to be 
+\begin_inset Formula $P_{t}^{A}$
+\end_inset
+
+and the price of the same commodity in location B at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to be 
+\begin_inset Formula $P_{t}^{B}$
+\end_inset
+
+, the law of one price states that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert \leq TC
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $TC$
+\end_inset
+
+ denotes a constant transaction cost.
+ If this condition holds, we say markets are perfectly integrated.
+ However, the inequality will not hold exactly at all points in time.
+ As arbitrage is often a time consuming process, the degree of market integratio
+n will be less than perfect.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert \leq T_{t}+\epsilon_{t}
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $\epsilon\sim N\left(0,\sigma^{2}\right)$
+\end_inset
+
+.
+ Such a model can be written as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert =\begin{cases}
+\rho.\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert +\epsilon_{t\;}if & \left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert >TC\\
+\epsilon_{t\;}if & \left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert \leq TC
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we have sufficient observations, we can use non-parametric smoothing
+ methods to get a sense of the evolution of the transaction costs.
+ We can estimate the model on the first 1:N observations and note down the
+ estimated transaction cost for this sub-sample.
+ We can then estimate the model again on the 2:N+1 observations and again
+ write down the estimated transaction cost.
+ This can go on until we arrive at the end of our price series T-N:T.
+ This will result in a smoothed line for the transaction cost TC.
+ In principle, we can smooth both the adjustment parameter and the transaction
+ cost in this way.
+ However, in this paper, we are interested in making the transaction cost
+ estimate more flexible and so we will estimate only one constant adjustment
+ speed.
+\end_layout
+
+\begin_layout Standard
+In particular, we will start by estimating a simple TAR model as described
+ above.
+ This will lead us to an estimate of the adjustment speed 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{\left(\rho\right)}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ if the price difference is outside the band
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In addition, it will give us a first estimate for the transaction cost,
+ which is constant over the entire period we have data for 
+\begin_inset Formula $\left(\hat{TC}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ Based on this initial estimate for the adjustment speed, we will estimate
+ a different 
+\begin_inset Formula $TC$
+\end_inset
+
+ for each t.
+ We do this by choosing a bandwidth h and then, using a grid search, finding
+ the TC such that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+TC_{t+h/2}=min_{TC}\sum_{t=t}^{t+h}\left(\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert -\hat{\rho}\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert I_{\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert >TC}+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert I_{\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert >TC}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After this, the estimates for 
+\begin_inset Formula $TC{}_{t}$
+\end_inset
+
+ are smoothed using a standard local polynomial regression.
+ This leads to a new series of transaction costs, 
+\begin_inset Formula $\widehat{TC_{t}}$
+\end_inset
+
+.
+ This time variant transaction cost, together with the initial speed of
+ adjustment could be seen as a first characterization of the degree of market
+ integration.
+ However, now that we have a more flexible estimate of the transaction cost,
+ we can use this estimate the update our estimate of the adjustment speed.
+ In particular: 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\hat{\hat{\rho}}=min_{\hat{\rho}}\sum\left(\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert -\hat{\rho}\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert I_{\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert >TC}+\left\Vert P_{t}^{A}-P_{t}^{B}\right\Vert I_{\left\Vert P_{t-1}^{A}-P_{t-1}^{B}\right\Vert >TC}\right)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This new adjustment speed can then be used again to estimate a new set of
+ time dependent transaction costs, which can then be smoothed again, after
+ which these new transaction costs can be used to update the adjustment
+ speed again.
+ This can go on until some condition has been met, for instance until the
+ change between two subsequent estimates of 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is smaller than some small number (i.e.
+ a convergence tolerance level) or until a maximum number of iterations
+ has been surpassed.
+\end_layout
+
+\begin_layout Section*
+Price Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=FALSE, result=FALSE, warning=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(foreign)
+\end_layout
+
+\begin_layout Plain Layout
+
+dta <- read.spss("/home/bjvca/data/data/mozambique/original/data.sav")  
+\end_layout
+
+\begin_layout Plain Layout
+
+dta <- data.frame(dta) 
+\end_layout
+
+\begin_layout Plain Layout
+
+dta_mze <- subset(dta,PROD=="Gr
+\backslash
+xe3o de Milho Branco Nacional")  
+\end_layout
+
+\begin_layout Plain Layout
+
+dta_mze$time <- paste(dta_mze$MES, dta_mze$ANO, sep="")  
+\end_layout
+
+\begin_layout Plain Layout
+
+prices <- reshape(dta_mze, v.names = "PNOM_1", idvar = "time", timevar =
+ "MERCADO", direction = "wide")
+\end_layout
+
+\begin_layout Plain Layout
+
+prices_ts <- ts(prices, frequency=12, start=c(2000,1))
+\end_layout
+
+\begin_layout Plain Layout
+
+#pdf("/home/bjvca/data/data/mozambique/paper/figure/tsgraph1.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+#plot(prices_ts[,"PNOM_1.Maputo"], ylim=c(0,19),ylab="price") 
+\end_layout
+
+\begin_layout Plain Layout
+
+#lines(prices_ts[,"PNOM_1.Lichinga"],lty=2) 
+\end_layout
+
+\begin_layout Plain Layout
+
+#lines(prices_ts[,"PNOM_1.Chimoio"],lty=3)
+\end_layout
+
+\begin_layout Plain Layout
+
+#legend("topleft",c("Maputo","Lichinga","Chimoio"),lty=c(1,2,3), bty="n")
+\end_layout
+
+\begin_layout Plain Layout
+
+#dev.off()
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The data we have at hand are monthly price observation series running from
+ January 2000 up to February 2011.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evolution-of-maize"
+
+\end_inset
+
+ illustrates this data for three selected markets.
+ The first market, Maputo, is the largest city in the country and, by far,
+ the major consumption area, with a strong demand pull for white maize and
+ only low-potential agricultural land nearby 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NewEntry7"
+
+\end_inset
+
+.
+ Lichinga is probably the most remote market we have in our data-set, tucked
+ away in the North Western corner of Mozambique.
+ To the west of Lichinga, Lake Malawi forms a natural barrier to trade.
+ To the North, the Ruvuma river runs from lake Malawi all the way to the
+ Indian Ocean, demarcating the border with Tanzania.
+ A third natural boundary is Lugenda river that forms the south eastern
+ border of the .
+ The South-Western border is formed by Malawi.
+ Chimoio lies somewhat halfway between Maputo and Lichinga.
+\end_layout
+
+\begin_layout Standard
+The high demand year around for maize in Maputo results in a price that
+ is in general significantly higher than in the other markets.
+ Prices in the other two markets are generally below the prices in Maputo,
+ consistent with a situation where Maputo is a deficit and the other markets
+ are in surplus areas.
+ Despite these differences in levels, the prices clearly move together.
+ In addition, the further apart two markets are, the larger the average
+ difference between the prices at any point in time.
+ There are also three clearly identifiable spikes.
+ The drought in Northern Mozambique in 2001/2002 is clearly visible.
+ During the main 2005/2006 growing season, prices spiked, especially in
+ Southern Mozambique, as a result of the 2004/2005 drought in the South.
+ Natural disasters in both 2007 and 2008, including floods in four central
+ provinces along the Zambezi River basin in January/February and severe
+ rainfall deficits (from January until the harvest time in April) causing
+ drought in certain districts of Mozambique particularly in Maputo, Gaza
+ and Inhambane provinces are also reflected in price hikes towards the end
+ of 2008 and the beginning of 2009.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../mozambique/paper/figure/tsgraph1.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Evolution of maize prices in three markets
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Evolution-of-maize"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Descriptive-statistics"
+
+\end_inset
+
+ provides summary statistics for all five market price series we will use
+ in the analysis.
+ On average, prices are higher in the South.
+ This is especially so for the capital city.
+ We also find that the standard deviation is largest in Maputo.
+ The standard deviation seems to reduce for more remote locations.
+ This is the opposite of what is reported in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:bla:agecon:v:33:y:2005:i:2:p:205-214"
+
+\end_inset
+
+.
+ Also surprising is that despite Maputo having the largest standard deviation,
+ it has the smallest range.
+ This observation is consistent with Maputo being better integrated than
+ the more remote markets.
+ Better integrated markets may face more volatile prices, since the price
+ level in a market is influenced by more prices within a larger area.
+ Poorly integrated markets, on the other hand, experience more extreme prices,
+ as glut or shortage signals are only slowly and partially transmitted to
+ other markets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Region
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Market
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+standard deviation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+minimum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maximum
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+South
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maputo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.478
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.502
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.552
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.141
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maxixe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.949
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.996
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.455
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.286
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Central
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chimoio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.211
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.975
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.371
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+North
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nampula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.261
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.768
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.257
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lichinga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.961
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.809
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.143
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.629
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descriptive statistics
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Descriptive-statistics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Results
+\end_layout
+
+\begin_layout Standard
+In general, we see that a simple AR model always underestimates the speed
+ of adjustment between two markets.
+ In other words, according to the AR model, it would always take longer
+ for an increase in the price margin to disappear.
+ This is due to the fact that the AR model does not appropriately reflect
+ the non-linear price adjustment created by the transaction cost band.
+ The region where no adjustment takes place is lumped together with the
+ region where adjustment takes place.
+ The adjustment speed is thus averaged out over these two regimes, pulling
+ the adjustment speed down.
+ For most of the market pairs, the transaction speed increases even more
+ when we allow for flexible transaction costs.
+ In addition, the estimated transaction cost for the TAR models are correlated
+ with distance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=FALSE, results=FALSE, warnings=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+load("/home/bjvca/data/data/mozambique/analysis/functions/resmat")
+\end_layout
+
+\begin_layout Plain Layout
+
+source("/home/bjvca/data/data/mozambique/analysis/functions/stars.R")
+\end_layout
+
+\begin_layout Plain Layout
+
+source("/home/bjvca/data/data/mozambique/analysis/functions/halflife.R")
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AR
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TAR
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+flexTAR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+distance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+adj
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+adj
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+adj
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maputo - Maxixe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+472
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,2,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,2,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,2,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maputo - Chimoio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1149
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,3,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,3,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,3,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,3,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,3,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,3,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,3,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maputo - Nampula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2178
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,4,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,4,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,4,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,4,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,4,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,4,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,4,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maputo - Lichinga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2007
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,5,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,5,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,5,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,5,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,5,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,5,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[1,5,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maxixe - Chimoio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+677
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,3,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,3,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,3,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,3,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,3,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,3,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,3,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maxixe - Nampula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1706
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,4,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,4,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,4,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,4,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,4,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,4,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,4,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maxixe - Lichinga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1535
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,5,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,5,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,5,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,5,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,5,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[2,5,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[2,5,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chimoio - Nampula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1154
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,4,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[3,4,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,4,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[3,4,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,4,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,4,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[3,4,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chimoio - Lichinga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+898
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,5,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[3,5,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,5,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[3,5,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,5,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,5,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[3,5,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nampula - Lichinga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+696
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[4,5,1]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[4,5,7])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[4,5,2]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[4,5,5])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[4,5,3]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[4,5,4]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{stars(resmat[4,5,6])}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Estimation results
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Estimation-results"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two markets that are closest to each other are Maputo and Maxixe, less
+ than 500 km apart.
+ Both are located directly along the EN1, Mozambique's arterial roadway.
+ Using a simple AR model that regresses the change in the price difference
+ between Maputo and Maxixe on the (absolute value of the) lagged level of
+ the price difference yields an estimate of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,1]}
+\end_layout
+
+\end_inset
+
+.
+ In other words, a price differences would tend to disappear at a rate of
+ 11 percent per year.
+ We know that such AR models underestimate the true adjustment parameter,
+ since they aggregate the adjustment inside and outside the band formed
+ by transaction costs into a single parameter.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../mozambique/paper/figure/flexfigPNOM_1.MaputoPNOM_1.Maxixe
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Maputo - Maxixe
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maputo---Maxixe"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we consider the non-linear estimate, we find an adjustment speed that
+ is significantly higher in absolute value.
+ In other words, if we impose that inside the band formed by the transaction
+ costs the adjustment speed is zero, we find the adjustment speed to be
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,2]}
+\end_layout
+
+\end_inset
+
+ if the price difference is higher than the transaction costs.
+ An alternative way to interpret this parameter is through half-lives which
+ is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{halflife(resmat[1,2,2])}
+\end_layout
+
+\end_inset
+
+ months
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A half-life expresses the time it takes for a shock to return to half its
+ initial value.
+\end_layout
+
+\end_inset
+
+.
+ Apart from the speed of adjustment, we also have an estimate of the transaction
+ cost which will have to be considered if one wants to assess the degree
+ of market integration, which amounts to a little over 8 percent of the
+ average price of maize in Maputo and Maxixe.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, we also estimate the market interconnectedness between Maxixe and
+ Maputo using our iterative flexible threshold auto-regressive method.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Estimation-results"
+
+\end_inset
+
+ reports an adjustment speed of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,2,4]}
+\end_layout
+
+\end_inset
+
+, which is relatively high in absolute values.
+ Since the transaction cost is estimated in a nonparametric way, we present
+ the result in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maputo---Maxixe"
+
+\end_inset
+
+.
+ The graph shows that transaction costs were higher in the beginning of
+ the period, and have been going down up to about 2007.
+ The drop from about 11 percent of the average price to about 7 percent.
+ Using the averages reported in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Descriptive-statistics"
+
+\end_inset
+
+, we find that transaction costs between Maputo and Maxixe have dropped
+ from 738 meticais per tonne to 470 meticais per metric ton.
+ Taking distance into consideration, this means from 48 US per 1000 km per
+ MT to 30 US per 1000 km per MT
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+And assuming an exchange rate of 0.03 to the dollar.
+\end_layout
+
+\end_inset
+
+.
+ After 2007, transaction cost seem to increase again.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../mozambique/paper/figure/flexfigPNOM_1.MaputoPNOM_1.Lichinga
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Maputo - Lichinga
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maputo---Lichinga"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two markets that seem to be least integrated according to table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Estimation-results"
+
+\end_inset
+
+ are Maputo and Lichinga.
+ They are about 2007 km apart by road.
+ Using the simple AR model, we estimate an adjustment speed of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,5,1]}
+\end_layout
+
+\end_inset
+
+, corresponding to a half-life of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{halflife(resmat[1,5,1])}
+\end_layout
+
+\end_inset
+
+ months.
+ Apart form the fact that this trade route has such a (in absolute value)
+ low adjustment speed, the threshold model also estimates very high transaction
+ costs.
+ The iteratively estimated flexible threshold model, which is pictured in
+ figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maputo---Lichinga"
+
+\end_inset
+
+, converges to an estimation speed of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,5,4]}
+\end_layout
+
+\end_inset
+
+, meaning it would take more then nine months for a shock away from the
+ transaction cost to return to half its initial value.
+\end_layout
+
+\begin_layout Standard
+The smoothed transaction cost in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maputo---Lichinga"
+
+\end_inset
+
+ seem to be pretty constant around about 15 percent
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The lower transaction cost in the beginning of the sample is clearly caused
+ by the missing data and bandwidth interaction.
+\end_layout
+
+\end_inset
+
+.
+ Again using the average reported in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Descriptive-statistics"
+
+\end_inset
+
+, we find that the cost of transacting a metric ton on these market is almost
+ 1000 meticais, but if we express this per 1000 km, the figure reduces to
+ about 14 US per metric ton.
+ This suggests that in Mozambique grain trade, a large part of the transaction
+ costs are fixed costs, as has also found to be the case in neighboring
+ Tanzania 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New2"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../mozambique/paper/figure/four1.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Selected markets 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apart from the Maputo-Lichinga trade route, the other trade routes between
+ Maputo and Northern and Central trade centers show sluggish integration.
+ For instance, the iterative threshold model Maputo-Nampula gives a half
+ life of more than half a year.
+ The transaction costs seem to be pretty stable around 10 percent.
+ Maputo-Chimoio has an estimated adjustment speed of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[1,3,4]}
+\end_layout
+
+\end_inset
+
+.
+ The transaction cost is also around 10 percent, but there seems to be a
+ slight increase around 2007.
+ Maxixe seems to be much better integrated with the Central and Northern
+ region.
+ Especially the Maxixe-Nampula route is interesting.
+ It combines a high (absolute value of) the adjustment speed with a low
+ and consistently declining transaction cost.
+ Over time, the transaction cost drops from about 9 percent tot about 4
+ percent.
+ Using the average prices from table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Descriptive-statistics"
+
+\end_inset
+
+ again, we see that this means a reduction from 9 US per metric ton per
+ 1000 km to 4 US per metric ton per 1000 km.
+\end_layout
+
+\begin_layout Standard
+The fact that Maxixe is that much better integrated with the maize surplus
+ areas than Maputo may seem strange, since they are rather close to each
+ other and connected by a relatively good road.
+ A possible explanation would be that Maputo is more relying on South Africa
+ for its maize supply than on the surplus areas in Mozambique itself.
+ Since all maize shipments from South Africa are unlikely to pass Maputo
+ without finding a buyer, Maxixe has no other option than to buy from the
+ Center and the North.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../mozambique/paper/figure/four2.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Selected markets 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chimoio-Namula seems to be very well integrated, with an adjustment speed
+ of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{resmat[3,4,4]}
+\end_layout
+
+\end_inset
+
+ and an associated half life of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{halflife(resmat[3,4,4])}
+\end_layout
+
+\end_inset
+
+.
+ This is combined with a transaction cost of about 4 to 5 percent of the
+ average price.
+\end_layout
+
+\begin_layout Section*
+Conclusion and ways to improve market integration
+\end_layout
+
+\begin_layout Standard
+Especially for agricultural based societies, a well functioning agricultural
+ market system linking supply areas to consumer centers is very important.
+ It ensures the right incentives are put in place for the farmers (higher
+ prices than would be the case under autarky due to high demand from consumer
+ centers) while at the same time keeping basic needs affordable in consumer
+ centers (lower prices than would be the case under autarky due to high
+ supply from supply areas).
+ But also for food security, staple food market integration is extremely
+ important.
+ Pockets of hunger are essentially caused by adverse shocks from which the
+ consequences can not be spread over a large enough area due to a lack of
+ market integration.
+ In Mozambique, newspapers regularly report instances of pockets of hunger
+ due to droughts and floods.
+ In addition, previous studies underline the dependence of Mozambique's
+ capital on South-Africa instead of on its own hinterland.
+\end_layout
+
+\begin_layout Standard
+Recent studies that aim to assess the degree of market integration in a
+ particular country or region often use threshold models.
+ These piecewise linear regression models are able to model the non-linearity
+ in arbitrage that is caused by the existence of transaction costs.
+ Using only price data, these models can be used to estimate two dimensions
+ of market integration: the transaction cost and the adjustment speed.
+ One of the main drawbacks of such models is that the estimated transaction
+ cost is assumed to be constant over time.
+ We extend the standard TAR model using non-parametric methods, such that
+ the data determines the functional form of the transaction cost.
+ With a better approximation of the transaction cost, we then re-estimate
+ the TAR model to get an update value of the adjustment speed.
+ This process is repeated until a certain criterion is met.
+\end_layout
+
+\begin_layout Standard
+We illustrate our method using price data for maize in five markets in Mozambiqu
+e.
+ Unsurprisingly, we find that markets that are closer too each other seem
+ to be better integrated.
+ For instance, the least integrated market pair is the Maputo-Lichinga trade
+ route.
+ More in general, we find that Lichinga is less integrated with the rest
+ of Mozambique.
+ Nampula seems to be rather well integrated, particularly with other markets
+ in the North and the East.
+ Our results also confirm that Maputo is more integrated with South Africa,
+ while nearby Maxixe is better integrated with the hinterland.
+ Even so, there is substantial room for improvement.
+\end_layout
+
+\begin_layout Standard
+A first way to improve market integration is to better physically link markets
+ to each other.
+ The rehabilitation of the EN1, which is supposed to link the North to the
+ South is a major step in the right direction.
+ However, the government should also invest in secondary roads that link
+ Eastern and Western locations to the EN1.
+ For good like maize, with a relatively low value to weight ratio, railways
+ are often a cheaper way of transportation.
+ The railroads that are presently operating in Mozambique run through three
+ different trade corridors (North from Nacala to Malawi, Center from Beira
+ to Malawi and South from Maputo to South Africa).
+ Maritime transport is hindered by the fact that only 2 ports are capable
+ of handling large vessels.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "AGEC:AGEC311"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Secondly, but at least equally important, is to increase the flow of information
+ between different markets.
+ Arbitrage involves the ex ante comparison of prices from one market to
+ prices from several other markets.
+ Based upon that information, traders can start moving goods from low priced
+ markets to high price markets.
+ These search costs are thus entirely part of the transaction cost.
+ In addition, the speed at which information travels will also affect how
+ quickly arbitrage happens.
+ So, the speed at which information (price, road conditions, quality requirement
+s, etc.) travels will also influence the adjustment speed.
+ The mobile phone revolution is certainly contributing to increased market
+ integration.
+ A classic study by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jensen01082007"
+
+\end_inset
+
+ finds that the adoption of mobile phones by Indian fishermen and wholesalers
+ was associated with a dramatic reduction in price dispersion, the complete
+ elimination of waste, and near-perfect adherence to the Law of One Price.
+ Similarly, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:aea:aejapp:v:2:y:2010:i:3:p:46-59"
+
+\end_inset
+
+ finds the introduction of mobile phone service in Niger between 2001 and
+ 2006 explains a 10 to 16 percent reduction in grain price dispersion.
+\end_layout
+
+\begin_layout Standard
+Thirdly, a core assumption in the spatial equilibrium model is that all
+ markets are sufficiently competitive.
+ If there is too little competition amongst traders, these traders will
+ be able to engage in monopolistic price setting.
+  While information and rural infrastructure will increase the number of
+ traders operating in remote areas, there are a host of other policies that
+ can increase competition amongst middlemen.
+ Examples would be providing appropriate insurance instruments for traders.
+ Also, arbitrage is often regarded as a somewhat shady activity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hayami01121996"
+
+\end_inset
+
+.
+ Governments should appreciate the important role played by a sufficiently
+ competitive trade sector for food security and agricultural development
+ and encourage institutions that cater for their interests.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "mi_mozambique"
+options "chicago"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

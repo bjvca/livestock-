@@ -1,0 +1,115 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Policy options for reducing poverty and vulnerability in conflict-prone
+ areas: Livestock market dynamics in pastoralist areas of Ethiopia
+\end_layout
+
+\begin_layout Author
+Bjorn Van Campenhout, Derek Headey and Bart Minten
+\end_layout
+
+\begin_layout Subsubsection*
+Increase prices for cattle as a raw input in the value chain
+\end_layout
+
+\begin_layout Standard
+Whether economic agents benefit or lose from changes in prices depends on
+ wheter they participate in the market mainly as sellers or as buyers.
+ ESSP paper suggests that pastoralists rarely rely on the purchase of animals
+ as 
+\end_layout
+
+\begin_layout Subsubsection*
+Increase intertemporal price arbitrage
+\end_layout
+
+\begin_layout Standard
+Barrett et al 2004 also indicate that pastoralist housheolds in Ethiopia
+ participate in livestock markets, but in relatively small volumes and at
+ varying rates over time.
+ In pastoralist areas livestock are sold to meet family cash nees to purchase
+ food and clothes and pay for medical and educational expenses.
+ Since livestock is the main store of wealth and formal credit markets are
+ limited at best, this suggests timing of sales is largely determined by
+ cash needs.
+ Better prices could be obtained if pastoralists would be able to postpone
+ time of sales up to the point when prices are highest.
+ This problem becomes more important when these cash needs are common, which
+ is likely to be the case for educational expenses.
+ Since several pastoralists will try to sell their animals at the same time,
+ this is likely to increase the price difference between the price they
+ get and the price they could get when prices attain their seasonal maximum.
+\end_layout
+
+\begin_layout Standard
+A promising policy response would be to provide credit that can be used
+ to cover such expenses.
+ A similar system as the popular livestock receipt systems could be devised
+ for pastoralists.
+ One of the main challenges would be to overcome the moral hazard problem
+ that comes into play when the money has been given and the animal has been
+ taken as collateral.
+\end_layout
+
+\end_body
+\end_document

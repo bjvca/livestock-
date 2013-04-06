@@ -1,0 +1,359 @@
+@comment{x-kbibtex-personnameformatting=<%l><, %f>}
+
+@article{van2007modelling,
+	author = "{Van Campenhout}, B.",
+	journal = "Food Policy",
+	number = "1",
+	pages = "112--127",
+	publisher = "Elsevier",
+	title = "{Modelling trends in food market integration: Method and an application to Tanzanian maize markets}",
+	volume = "32",
+	year = "2007"
+}
+
+@article{ravallion1986testing,
+	author = "Ravallion, M.",
+	journal = "American Journal of Agricultural Economics",
+	pages = "102--109",
+	publisher = "JSTOR",
+	title = "{Testing market integration}",
+	year = "1986"
+}
+
+@article{krishna2004escaping,
+	author = "Krishna, A.",
+	journal = "World Development",
+	number = "1",
+	pages = "121--136",
+	publisher = "Elsevier",
+	title = "{Escaping poverty and becoming poor: who gains, who loses, and why?}",
+	volume = "32",
+	year = "2004"
+}
+
+@incollection{RePEc:eee:hagchp:2-17,
+	abstract = "Agricultural commodities are typically produced over an extensive spatial area and are costly to transport relative to their total value. These characteristics yield a complex set of spatial price linkages which are often studied to gain insights into the performance of markets. An extensive literature has addressed a wide range of issues relating to spatial price linkages. Issues relate to market conduct and performance, regional and international trade relationships, efficiency, and developing economy market performance. This chapter reviews issues related to economic and empirical models of spatial price linkages. The relative weaknesses and merits of each approach are identified.",
+	author = "Fackler, Paul L. and Goodwin, Barry K.",
+	booktitle = "{Handbook of Agricultural Economics}",
+	chapter = "17",
+	edition = "",
+	editor = "Gardner, B. L. and Rausser, G. C.",
+	keywords = "",
+	month = "00",
+	number = "",
+	pages = "971--1024",
+	publisher = "Elsevier",
+	series = "{Handbook of Agricultural Economics}",
+	title = "{Spatial price analysis}",
+	url = "http://ideas.repec.org/h/eee/hagchp/2-17.html",
+	volume = "1",
+	year = 2001
+}
+
+@article{dercon1995market,
+	author = "Dercon, S.",
+	journal = "The Journal of Development Studies",
+	number = "1",
+	pages = "112--143",
+	publisher = "Taylor \& Francis",
+	title = "{On market integration and liberalisation: method and application to Ethiopia}",
+	volume = "32",
+	year = "1995"
+}
+
+@article{baulch1997transfer,
+	author = "Baulch, B.",
+	journal = "American Journal of Agricultural Economics",
+	pages = "477--487",
+	publisher = "JSTOR",
+	title = "{Transfer costs, spatial arbitrage, and testing for food market integration}",
+	year = "1997"
+}
+
+@article{balke1997threshold,
+	author = "Balke, N.S. and Fomby, T.B.",
+	journal = "International economic review",
+	pages = "627--645",
+	publisher = "JSTOR",
+	title = "{Threshold cointegration}",
+	year = "1997"
+}
+
+@article{negassa2007estimating,
+	author = "Negassa, A. and Myers, R.J.",
+	journal = "American Journal of Agricultural Economics",
+	pages = "338--352",
+	title = "{Estimating policy effects on spatial market efficiency: An extension to the parity bounds model}",
+	volume = "89",
+	year = "2007"
+}
+
+@article{goodwin2001spatial,
+	author = "Goodwin, B.K. and Piggott, N.E.",
+	journal = "American Journal of Agricultural Economics",
+	pages = "302--317",
+	publisher = "JSTOR",
+	title = "{Spatial market integration in the presence of threshold effects}",
+	year = "2001"
+}
+
+@article{NewEntry1,
+	author = "Blyn, G.",
+	journal = "Indian Journal of Agricultural Economics",
+	pages = "56--59",
+	title = "{Price Series Correlation as a Measure of Market Integration}",
+	volume = "28",
+	year = "1973"
+}
+
+@article{NewEntry2,
+	author = "Ardeni, P.G.",
+	journal = "American Journal of Agricultural Economics",
+	number = "3",
+	pages = "661--669",
+	title = "{Does the Law of One Price Really Hold for Commodity Prices}",
+	volume = "71",
+	year = "1989"
+}
+
+@article{NewEntry3,
+	author = "Goodwin, Barry K. and Schroeder, T.C",
+	journal = "American Journal of Agricultural Economics",
+	number = "2",
+	pages = "452--464",
+	title = "{Cointegration Tests and Spatial Price Linkages in Regional Cattle Markets}",
+	volume = "73",
+	year = "1991"
+}
+
+@article{NewEntry4,
+	author = "Palaskas, T.B. and Harriss-White, B.",
+	journal = "Journal of Development studies",
+	number = "1",
+	pages = "1--57",
+	title = "{Testing Market Integration: New Approaches with Case Material from the West Bengal Food Economy}",
+	volume = "31",
+	year = "1993"
+}
+
+@article{NewEntry5,
+	author = "Alexander, C. and Wyeth, J.",
+	journal = "Journal of Development Studies",
+	number = "2",
+	pages = "303--328",
+	title = "{Cointegration and Market Integration: An Application to the Indonesian Rice Market}",
+	volume = "30",
+	year = "1994"
+}
+
+@article{NewEntry6,
+	author = "Goodwin, Barry K. and Piggott, N.E.",
+	journal = "Journal of Agricultural Economics",
+	number = "2",
+	pages = "302--317",
+	title = "{Spatial Market Integration in the Presence of Threshold Effects}",
+	volume = "82",
+	year = "2001"
+}
+
+@article{NewEntry7,
+	author = "Penzhorn, N. and Arndt, C.",
+	journal = "Agrekon",
+	number = "2",
+	pages = "147--160",
+	title = "{Maize markets in Mozambique: Testing for market integration}",
+	volume = "41",
+	year = "2002"
+}
+
+@article{RePEc:bla:jageco:v:57:y:2006:i:3:p:501-522,
+	abstract = "We apply non-parametric methods to a consideration of price transmission processes within US egg markets at the turn of the nineteenth century. Gordon (National Bureau of Economic Research Working Paper 7833, 2000) labelled this as an era of 'Great Inventions' which contributed to the subsequent years of significant productivity growth and noted that the development of mechanical refrigeration and transportation technologies played an important role in this growth. Our models present certain advantages relative to parametric models traditionally employed in price transmission analyses. We compare results derived from local polynomial modelling with those obtained using non-linear threshold models. Both techniques suggest that US egg markets were interrelated at the turn of the nineteenth century. However, non-parametric techniques often suggest a higher degree of price transmission than that implied by threshold models. Results also suggest that threshold models may have difficulties in adequately capturing price relationship dynamics, especially when these are of a highly nonlinear nature. Copyright 2006 Blackwell Publishing Ltd.",
+	author = "Serra, Teresa and Goodwin, Barry Kent and Gil, Jos{\'e} M. and Mancuso, Anthony",
+	journal = "Journal of Agricultural Economics",
+	number = "3",
+	pages = "501--522",
+	title = "{Non-parametric Modelling of Spatial Price Relationships}",
+	url = "http://econpapers.repec.org/RePEc:bla:jageco:v:57:y:2006:i:3:p:501-522",
+	volume = "57",
+	year = "2006"
+}
+
+@techreport{RePEc:ags:iaae06:25657,
+	abstract = "The primary objective of this research was to measure the extent of market integration between major surplus and deficit maize markets in Mozambique namely, Chimoio-Maputo, Chimoio-Beira, Ribaue-Nampula, and Mocuba-Nampula. To achieve this objective, Threshold Vector Autoregressive models were applied. The choice of the model was motivated by unobservable transaction costs and the import ant influence that their presence may exert on equilibrium spatial price relationships. The following are some of the major findings of the study. Firstly, threshold values (i.e. estimates of transaction costs) are found to be correlated positively with distance and inversely with the condition of the roads connecting markets. Secondly, market integration analysis revealed that out of the four surplus and deficit market combinations studied, Chimoio- Maputo and Mocuba-Nampula market pairs are integrated. However, the degree of integration was found to be the strongest in the former. Finally, results from the impulse response suggested that deficit/surplus markets, in the integrated market combinations, are relatively more responsive to shocks emanating from surplus/deficit markets.",
+	author = "Alemu, Zerihun Gudeta and Biacuana, G.R.",
+	institution = "International Association of Agricultural Economists",
+	keywords = "Mozambique; market integration; maize market; transaction cost; threshold vector error correction; C",
+	number = "25657",
+	title = "{Measuring Market Integration in Mozambican Maize Markets: A Threshold Vector Error Correction Approach}",
+	type = "2006 Annual Meeting, August 12-18, 2006, Queensland, Australia",
+	url = "http://ideas.repec.org/p/ags/iaae06/25657.html",
+	year = 2006
+}
+
+@book{alemu2009market,
+	author = "Alemu, Z.G. and {Van Schalkwyk}, H.D.",
+	isbn = "9789994455263",
+	lccn = "2009349841",
+	publisher = "Organisation for Social Science Research in Eastern and Southern Africa (OSSREA)",
+	title = "{Market Integration in Mozambican Maize Markets}",
+	url = "http://books.google.co.ug/books?id=P75ykxHUoVoC",
+	year = "2009"
+}
+
+@article{RePEc:bla:agecon:v:33:y:2005:i:2:p:205-214,
+	abstract = "Maize (\&quot;Zea mays\&quot;) shortages and maize price instability continue to occur in Mozambique in spite of policy reforms and great capacity for increased production in northern Mozambique. This study measured the efficiency of spatial maize price arbitrage in Mozambique's post-reform period. Spatial price inefficiency does not seem to explain why food shortages continue to occur in Mozambique, suggesting nonprice market constraints such as poor infrastructure and poor market institutions as more likely explanations. Baulch's spatial efficiency test indicated that it is not profitable to ship maize from northern surplus maize regions to southern Mozambique. Records of interregional maize shipments show that indeed grain is not being shipped from the north to the south. Market liberalization may have improved spatial price efficiency, but high transfer costs still limit trade and potential benefits from freeing markets. Under these circumstances, food shortages and price instability are likely to continue. Copyright 2005 International Association of Agricultural Economics.",
+	author = "Tostao, Emilio and Brorsen, B. Wade",
+	journal = "Agricultural Economics",
+	keywords = "",
+	month = "09",
+	number = "2",
+	pages = "205--214",
+	title = "{Spatial price efficiency in Mozambique's post-reform maize markets}",
+	url = "http://ideas.repec.org/a/bla/agecon/v33y2005i2p205-214.html",
+	volume = "33",
+	year = 2005
+}
+
+@techreport{RePEc:ags:aaae10:96644,
+	abstract = "Price transmission between the South African market and other regional markets is not as straightforward, despite South Africa{\rq}s role of a surplus producer for the region. There appears to be a host of local factors that must be taken into account in order to anticipate the likely level of regional food prices. This article assesses the degree of market integration and the speed of price adjustment to spatial price differentials between the SAFEX maize price in South Africa and maize grain and maize meal prices in Maputo, Mozambique. The findings of this study indicate that under certain trading regimes, there is no evidence of a long-run relationship between Mozambican and South African maize grain prices. This implies that any large deviations, within these regimes, which exceed transaction costs, could continue to grow with no tendency towards equilibrium. However, the trade volume data indicates maize grain exports from South Africa into Mozambique in every month except for three within the sample set. Hence, the empirical findings of this paper are unexpected given a simple arbitrage argument. Possible reasons for these findings are highlighted in the article. It is interesting to note that when the same empirical analysis is undertaken for the SAFEX maize prices and maize meal prices in Maputo then there is in fact evidence of a long-run relationship between these prices in a high import regime. These findings are not surprising and are what we would expect since two of the largest milling companies, located in Maputo are responsible for the majority of the volume of maize grain imported into the country from South Africa.",
+	author = "Traub, Lulama Ndibongo and Myers, Robert J. and Jayne, Thomas S. and Meyer, Ferdinand H.",
+	institution = "African Association of Agricultural Economists (AAAE) \& Agricultural Economics Association of South Africa (AEASA)",
+	keywords = "price transmission; market integration; cointegration; trade regimes; Crop Production/Industries",
+	month = sep,
+	number = "96644",
+	title = "{Measuring Integration and Efficiency in Maize Grain Markets: The Case of South Africa and Mozambique}",
+	type = "2010 AAAE Third Conference/AEASA 48th Conference, September 19-23, 2010, Cape Town, South Africa",
+	url = "http://ideas.repec.org/p/ags/aaae10/96644.html",
+	year = 2010
+}
+
+@techreport{New1,
+	author = "WFP/FAO",
+	title = "{FAO/WFP CROP AND FOOD SECURITY ASSESSMENT MISSION TO MOZAMBIQUE }",
+	year = "2010"
+}
+
+@techreport{RePEc:ags:aaae10:96644,
+	abstract = "Price transmission between the South African market and other regional markets is not as straightforward, despite South Africa{\rq}s role of a surplus producer for the region. There appears to be a host of local factors that must be taken into account in order to anticipate the likely level of regional food prices. This article assesses the degree of market integration and the speed of price adjustment to spatial price differentials between the SAFEX maize price in South Africa and maize grain and maize meal prices in Maputo, Mozambique. The findings of this study indicate that under certain trading regimes, there is no evidence of a long-run relationship between Mozambican and South African maize grain prices. This implies that any large deviations, within these regimes, which exceed transaction costs, could continue to grow with no tendency towards equilibrium. However, the trade volume data indicates maize grain exports from South Africa into Mozambique in every month except for three within the sample set. Hence, the empirical findings of this paper are unexpected given a simple arbitrage argument. Possible reasons for these findings are highlighted in the article. It is interesting to note that when the same empirical analysis is undertaken for the SAFEX maize prices and maize meal prices in Maputo then there is in fact evidence of a long-run relationship between these prices in a high import regime. These findings are not surprising and are what we would expect since two of the largest milling companies, located in Maputo are responsible for the majority of the volume of maize grain imported into the country from South Africa.",
+	author = "Traub, Lulama N. and Myers, Robert J. and Jayne, Thomas S. and Meyer, Ferdinand H.",
+	institution = "African Association of Agricultural Economists (AAAE)",
+	keywords = "price transmission; market integration; cointegration; trade regimes; Crop Production/Industries",
+	number = "96644",
+	title = "{Measuring Integration and Efficiency in Maize Grain Markets: The Case of South Africa and Mozambique}",
+	type = "2010 AAAE Third Conference/AEASA 48th Conference, September 19-23, 2010, Cape Town, South Africa",
+	url = "http://econpapers.repec.org/RePEc:ags:aaae10:96644",
+	year = "2010"
+}
+
+@techreport{RePEc:ags:midcwp:56068,
+	abstract = "Ministry of Agriculture and Rural Development, Directorate of Economics, Republic of Mozambique",
+	author = "Tschirley, David L. and Abdula, Danilo Carimo",
+	institution = "Michigan State University, Department of Agricultural, Food, and Resource Economics",
+	keywords = "food security; food policy; Mozambique; marketing; trade; Food Security and Poverty; Marketing; Q18",
+	number = "56068",
+	title = "{Toward Improved Marketing and Trade Policies to Promote Household Food Security in Central and Southern Mozambique: 2007 Update}",
+	type = "Food Security Collaborative Working Papers",
+	url = "http://econpapers.repec.org/RePEc:ags:midcwp:56068",
+	year = "2007"
+}
+
+@article{AGEC:AGEC311,
+	author = "Cirera, Xavier and Arndt, Channing",
+	doi = "10.1111/j.1574-0862.2008.00311.x",
+	issn = "1574-0862",
+	journal = "Agricultural Economics",
+	keywords = "F14; Q13; Maize markets; Mozambique; Spatial arbitrage; Road rehabilitation; Parity Bounds Model",
+	number = "1",
+	pages = "17--28",
+	publisher = "Blackwell Publishing Inc",
+	title = "{Measuring the impact of road rehabilitation on spatial market efficiency in maize markets in Mozambique}",
+	url = "http://dx.doi.org/10.1111/j.1574-0862.2008.00311.x",
+	volume = "39",
+	year = "2008"
+}
+
+@techreport{New2,
+	author = "Mkenda, Beatrice Kalinda and {Van Campenhout}, B.",
+	institution = "University of Oxford/London School of Economics",
+	organization = "International Growth Center",
+	series = "{IGC Working Paper No. 11/0898}",
+	title = "{Estimating Transaction Costs in Tanzanian Supply Chains}",
+	year = "2011"
+}
+
+@article{Jensen01082007,
+	abstract = "When information is limited or costly, agents are unable to engage in optimal arbitrage. Excess price dispersion across markets can arise, and goods may not be allocated efficiently. In this setting, information technologies may improve market performance and increase welfare. Between 1997 and 2001, mobile phone service was introduced throughout Kerala, a state in India with a large fishing industry. Using microlevel survey data, we show that the adoption of mobile phones by fishermen and wholesalers was associated with a dramatic reduction in price dispersion, the complete elimination of waste, and near-perfect adherence to the Law of One Price. Both consumer and producer welfare increased.",
+	author = "Jensen, Robert",
+	doi = "10.1162/qjec.122.3.879",
+	eprint = "http://qje.oxfordjournals.org/content/122/3/879.full.pdf+html",
+	journal = "The Quarterly Journal of Economics",
+	number = "3",
+	pages = "879--924",
+	title = "{The Digital Provide: Information (Technology), Market Performance, and Welfare in the South Indian Fisheries Sector}",
+	url = "http://qje.oxfordjournals.org/content/122/3/879.abstract",
+	volume = "122",
+	year = "2007"
+}
+
+@article{RePEc:aea:aejapp:v:2:y:2010:i:3:p:46-59,
+	abstract = "Price dispersion across markets is common in developing countries. Using novel market and trader-level data, this paper provides estimates of the impact of mobile phones on price dispersion across grain markets in Niger. The introduction of mobile phone service between 2001 and 2006 explains a 10 to 16 percent reduction in grain price dispersion. The effect is stronger for market pairs with higher transport costs. (JEL O13, O33, Q11, Q13)",
+	author = "Aker, Jenny C.",
+	journal = "American Economic Journal: Applied Economics",
+	keywords = "",
+	month = "July",
+	number = "3",
+	pages = "46--59",
+	title = "{Information from Markets Near and Far: Mobile Phones and Agricultural Markets in Niger}",
+	url = "http://ideas.repec.org/a/aea/aejapp/v2y2010i3p46-59.html",
+	volume = "2",
+	year = 2010
+}
+
+@book{takayama1971spatial,
+	author = "Takayama, T. and Judge, G.G.",
+	publisher = "North-Holland Publishing Company",
+	series = "{Contributions to economic analysis}",
+	title = "{Spatial and Temporal Price and Allocation Models}",
+	url = "http://books.google.co.ug/books?id=7d1ztgAACAAJ",
+	year = "1971"
+}
+
+@article{New3,
+	author = "Sexton, Richard J. and Kling, Catherine L. and Carman, Hoy F.",
+	journal = "American Journal of Agricultural Economics",
+	number = "3",
+	pages = "568--580",
+	title = "{Market Integration, Efficiency of Arbitrage, and Imperfect Competition: Methodology and Application to U.S. Celery}",
+	volume = "73",
+	year = "1991"
+}
+
+@incollection{Fackler2001971,
+	author = "Fackler, Paul L. and Goodwin, Barry K.",
+	booktitle = "{Marketing, Distribution and Consumers}",
+	doi = "10.1016/S1574-0072(01)10025-3",
+	editor = "Gardner, Bruce L. and Rausser, Gordon C.",
+	issn = "1574-0072",
+	keywords = "spatial equilibrium; price analysis; law of one price; market integration; market efficiency",
+	pages = "971--1024",
+	publisher = "Elsevier",
+	series = "{Handbook of Agricultural Economics}",
+	title = "{Chapter 17 Spatial price analysis}",
+	url = "http://www.sciencedirect.com/science/article/pii/S1574007201100253",
+	volume = "1, Part B",
+	year = "2001"
+}
+
+@article{Hayami01121996,
+	author = "Hayami, Yujiro",
+	doi = "10.2307/1243486",
+	eprint = "http://ajae.oxfordjournals.org/content/78/5/1157.full.pdf+html",
+	journal = "American Journal of Agricultural Economics",
+	number = "5",
+	pages = "1157--1167",
+	title = "{The Peasant in Economic Modernization}",
+	url = "http://ajae.oxfordjournals.org/content/78/5/1157.short",
+	volume = "78",
+	year = "1996"
+}
+

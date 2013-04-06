@@ -1,0 +1,111 @@
+library(foreign)
+dta <- read.dta("/home/bjvca/data/data/livestock/data/data3.dta") 
+
+//keep only cattle
+dta_cattle <- subset(dta,Kind=="Cattle")  
+
+//average over breed, age, sex, grade
+library(doBy)
+ave_cattle <- summaryBy(Price~Market+year+month+day, data=dta_cattle, na.rm=T) 
+ave_cattle_wide <- reshape(ave_cattle, idvar= c("day","month","year"),timevar="Market",direction="wide")
+ave_cattle_wide <- ave_cattle_wide[order(ave_cattle_wide$year,ave_cattle_wide$month,ave_cattle_wide$day),]
+
+ave_cattle_wide$date <- paste(ave_cattle_wide$day,paste(ave_cattle_wide$month,ave_cattle_wide$year,sep="/"),sep="/" )
+library(zoo)
+
+ave_cattle_wide$d1<-as.Date(ave_cattle_wide$date,"%d/%m/%Y")
+ave_cattle_wide$ds<-strptime(ave_cattle_wide$date,"%d/%m/%Y")
+zkere <- zoo(ave_cattle_wide$"Price.mean.Addis Ababa Kera",as.Date(ave_cattle_wide$date,"%d/%m/%Y")) 
+plot(na.approx(z),ylim=c(0,11000))
+zkararo <- zoo(ave_cattle_wide$"Price.mean.Addis Ababa Kararo" ,as.Date(ave_cattle_wide$date,"%d/%m/%Y")) 
+lines(na.approx(z), col="red")
+z <- zoo(ave_cattle_wide$"Price.mean.Addis Ababa Shegole" ,as.Date(ave_cattle_wide$date,"%d/%m/%Y")) 
+lines(na.approx(z), col="blue") 
+
+markets <- c("Price.mean.Abaala","Price.mean.Addis Ababa Kararo","Price.mean.Addis Ababa Kera","Price.mean.Addis Ababa Shegole","Price.mean.Ayssaita","Price.mean.Boditi",
+"Price.mean.Chifra","Price.mean.Diredawa",
+"Price.mean.Kombolch",           
+"Price.mean.Moyales",
+"Price.mean.Negele Borna",
+"Price.mean.Shashemene",
+"Price.mean.Were")
+
+
+resmat <- array(0,c(length(markets),length(markets),7))
+
+rownames(resmat) <- markets
+colnames(resmat)  <- markets
+ave_cattle_wide["Price.mean.Kombolch"][ave_cattle_wide["Price.mean.Kombolch"]==min(ave_cattle_wide["Price.mean.Kombolch"], na.rm=T)] <- 3313
+ave_cattle_wide["Price.mean.Boditi"][ave_cattle_wide["Price.mean.Boditi"]==min(ave_cattle_wide["Price.mean.Boditi"], na.rm=T)] <- NA
+ave_cattle_wide["Price.mean.Boditi"][ave_cattle_wide["Price.mean.Boditi"]==min(ave_cattle_wide["Price.mean.Boditi"], na.rm=T)] <- NA
+ave_cattle_wide["Price.mean.Shashemene"][ave_cattle_wide["Price.mean.Shashemene"]==min(ave_cattle_wide["Price.mean.Shashemene"], na.rm=T)] <- NA
+ave_cattle_wide$t <- 1:dim(ave_cattle_wide)[1]
+i <- markets[1]
+j <- markets[2]
+
+test<- na.approx(zoo(ave_cattle_wide[i],as.Date(ave_cattle_wide$date,"%d/%m/%Y")))
+test$p2 <- na.approx(zoo(ave_cattle_wide[j],as.Date(ave_cattle_wide$date,"%d/%m/%Y")))
+test$t <- zoo(ave_cattle_wide$t,as.Date(ave_cattle_wide$date,"%d/%m/%Y"))
+
+names(test) <-c("p1","p2","t")
+
+
+test$diff <- abs(as.numeric(unlist((test$p1-test$p2)/(test$p1+test$p2)/2))*100)
+
+test$ylag <- NA 	
+for (t in 2:length(test$diff)) { test$ylag[t] <- test$diff[t-1] }   
+prices <- test
+
+prices$dep <- prices$diff-prices$ylag
+
+
+
+prices <- prices[complete.cases(prices)]
+
+     
+
+
+  
+library(DEoptim)
+/*constant threshold and adjustment*/
+
+
+normNLL = function(par) {
+     y.pred = (as.numeric(abs(prices$ylag)>par[1])*(par[2]*(prices$ylag))    )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+opt <- DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001), upper=c(quantile(abs(prices$ylag),0.9),0,1000),  control=list(itermax=100))
+
+/*calculate standard error*/
+
+pt(opt$optim$bestmem[2]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag)), 3000)
+
+/*constant threshold and adjustment: structural break*/
+
+
+normNLL = function(par) {
+     y.pred = (as.numeric((prices$t>par[4]))*as.numeric(abs(prices$ylag)>par[1]+ par[7]*prices$t )*(par[2]*(prices$ylag)) + (1-as.numeric(prices$t>par[4]))*as.numeric(abs(prices$ylag)>par[5]+ par[7]*prices$t)*(par[6]*(prices$ylag))     )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+opt <- DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001,quantile(prices$t,0.1),quantile(abs(prices$ylag),0.1),-1,-0.01 ), upper=c(quantile(abs(prices$ylag),0.9),0,1000,quantile(prices$t,0.9), quantile(abs(prices$ylag),0.9),0,0.01),  control=list(itermax=500))
+
+ print(paste("structural bread detected at", rownames(data.frame(prices[prices$t==round(opt$optim$bestmem[4])]))))
+
+/*calculate standard error*/
+
+pt(opt$optim$bestmem[2]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag)), 3000)
+
+
+normNLL = function(par) {
+     y.pred = (as.numeric(abs(prices$ylag)>par[1] + par[4]*prices$t + par[5]*prices$t^2)*(par[2]*(prices$ylag))    )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001,-100,-100), upper=c(quantile(abs(prices$ylag),0.9),0,1000,100,100),  control=list(itermax=4000))
+
+ 
+ source("/home/bjvca/data/data/livestock/analysis/functions/tar.R")
+tar(prices$diff, minpct=.10)
+ 
+ summary(lm(dep~ylag-1,data=prices))
+ 
+ 

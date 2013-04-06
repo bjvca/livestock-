@@ -1,0 +1,155 @@
+library(foreign)
+dta <- read.dta("/home/bjvca/data/data/livestock/data/data3.dta") 
+
+#keep only cattle
+dta_cattle <- subset(dta,Kind=="Cattle")  
+
+#average over breed, age, sex, grade
+library(doBy)
+ave_cattle <- summaryBy(Price~Market+year+month+day, data=dta_cattle, na.rm=T) 
+ave_cattle_wide <- reshape(ave_cattle, idvar= c("day","month","year"),timevar="Market",direction="wide")
+ave_cattle_wide <- ave_cattle_wide[order(ave_cattle_wide$year,ave_cattle_wide$month,ave_cattle_wide$day),]
+
+ave_cattle_wide$date <- paste(ave_cattle_wide$day,paste(ave_cattle_wide$month,ave_cattle_wide$year,sep="/"),sep="/" )
+library(zoo)
+
+ave_cattle_wide$d1<-as.Date(ave_cattle_wide$date,"%d/%m/%Y")
+ave_cattle_wide$ds<-strptime(ave_cattle_wide$date,"%d/%m/%Y")
+# zkere <- zoo(ave_cattle_wide$"Price.mean.Addis Ababa Kera",as.Date(ave_cattle_wide$date,"%d/%m/%Y")) 
+# plot(na.approx(z),ylim=c(0,11000))
+# zkararo <- zoo(ave_cattle_wide$"Price.mean.Addis Ababa Kararo" ,as.Date(ave_cattle_wide$date,"%d/%m/%Y")) 
+# lines(na.approx(z), col="red")
+# z <- zoo(ave_cattle_wide$"Price.mean.Addis Ababa Shegole" ,as.Date(ave_cattle_wide$date,"%d/%m/%Y")) 
+# lines(na.approx(z), col="blue") 
+
+markets <- c("Price.mean.Abaala","Price.mean.Addis Ababa Kararo","Price.mean.Addis Ababa Kera","Price.mean.Addis Ababa Shegole","Price.mean.Ayssaita","Price.mean.Boditi",
+"Price.mean.Chifra","Price.mean.Diredawa",
+"Price.mean.Kombolch",           
+"Price.mean.Moyales",
+"Price.mean.Negele Borna",
+"Price.mean.Shashemene",
+"Price.mean.Were")
+
+resmat <- array(0,c(length(markets),length(markets),25))
+struct <- array(0,c(length(markets),length(markets),2))
+rownames(resmat) <- markets
+colnames(resmat)  <- markets
+
+rownames(struct) <- markets
+colnames(struct)  <- markets
+
+ave_cattle_wide["Price.mean.Kombolch"][ave_cattle_wide["Price.mean.Kombolch"]==min(ave_cattle_wide["Price.mean.Kombolch"], na.rm=T)] <- 3313
+ave_cattle_wide["Price.mean.Boditi"][ave_cattle_wide["Price.mean.Boditi"]==min(ave_cattle_wide["Price.mean.Boditi"], na.rm=T)] <- NA
+ave_cattle_wide["Price.mean.Boditi"][ave_cattle_wide["Price.mean.Boditi"]==min(ave_cattle_wide["Price.mean.Boditi"], na.rm=T)] <- NA
+ave_cattle_wide["Price.mean.Shashemene"][ave_cattle_wide["Price.mean.Shashemene"]==min(ave_cattle_wide["Price.mean.Shashemene"], na.rm=T)] <- NA
+ave_cattle_wide$t <- 1:dim(ave_cattle_wide)[1]
+library(DEoptim)
+for (i in markets) {
+for (j in markets) {
+if (j!=i) 
+{
+
+
+test<- na.approx(zoo(ave_cattle_wide[i],as.Date(ave_cattle_wide$date,"%d/%m/%Y")))
+test$p2 <- na.approx(zoo(ave_cattle_wide[j],as.Date(ave_cattle_wide$date,"%d/%m/%Y")))
+test$t <- zoo(ave_cattle_wide$t,as.Date(ave_cattle_wide$date,"%d/%m/%Y"))
+
+names(test) <-c("p1","p2","t")
+
+
+test$diff <- as.numeric(unlist((test$p1-test$p2)/(test$p1+test$p2)/2))*100
+
+pdf(paste(paste("/home/bjvca/data/data/livestock/analysis/output/",i,sep=""),j, sep=""))
+plot(test$diff)
+dev.off()
+
+test$ylag <- NA 	
+for (t in 2:length(test$diff)) { test$ylag[t] <- test$diff[t-1] }   
+prices <- test
+
+
+#simple OLS AR1 model as baseline, save adjustment speed, p-value of adjustment speed and log-likelihood  
+prices$dep <- prices$diff-prices$ylag
+prices <- prices[complete.cases(prices)]
+print(i)
+print(j)
+resmat[i,j,1] <- coefficients(lm(dep~ylag-1,data=prices)) 
+resmat[i,j,2] <- coefficients(summary(lm(dep~ylag-1,data=prices)))[,4] 
+resmat[i,j,3] <- -sum(dnorm(prices$dep,mean=predict(lm(dep~ylag-1,data=prices)),sd=sd(residuals(lm(dep~ylag-1,data=prices))),log=T)) 
+
+#ML TAR model, save threshold, adjustment speed, p-value of adjustment speed and log likelihood
+normNLL = function(par) {
+     y.pred = (as.numeric(abs(prices$ylag)>par[1])*(par[2]*(prices$ylag))    )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+opt <- DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001), upper=c(quantile(abs(prices$ylag),0.9),0,1000),  control=list(itermax=100))
+
+resmat[i,j,4] <-  opt$optim$bestmem[1]
+resmat[i,j,5] <-  opt$optim$bestmem[2]
+resmat[i,j,6] <- pt(-abs(opt$optim$bestmem[2]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))), length(prices$ylag))*2
+resmat[i,j,7] <- opt$optim$bestval
+
+#ML TAR model with tend in threshold, save threshold (constant + trend gradient), adjustment speed, p-value of adjustment speed and log likelihood
+normNLL = function(par) {
+     y.pred = (as.numeric(abs(prices$ylag)>(par[1]+par[4]*prices$t))*(par[2]*(prices$ylag))    )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+opt <- DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001,-0.01), upper=c(quantile(abs(prices$ylag),0.9),0,1000,0.01),  control=list(itermax=100))
+
+resmat[i,j,8] <-  opt$optim$bestmem[1]
+resmat[i,j,9] <-  opt$optim$bestmem[4]
+resmat[i,j,10] <-  opt$optim$bestmem[2]
+resmat[i,j,11] <- pt(-abs(opt$optim$bestmem[2]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))), length(prices$ylag))*2
+resmat[i,j,12] <- opt$optim$bestval
+
+ 
+#ML TAR model with structural break, save threshold before and after structural break, adjustment speed before and after the break, and associated p-values
+normNLL = function(par) {
+     y.pred = (as.numeric((prices$t>par[4]))*as.numeric(abs(prices$ylag)>par[1] )*(par[2]*(prices$ylag)) + (1-as.numeric(prices$t>par[4]))*as.numeric(abs(prices$ylag)>par[5])*(par[6]*(prices$ylag))     )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+opt <- DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001,quantile(prices$t,0.1),quantile(abs(prices$ylag),0.1),-1 ), upper=c(quantile(abs(prices$ylag),0.9),0,1000,quantile(prices$t,0.9), quantile(abs(prices$ylag),0.9),0),  control=list(itermax=200))
+struct[i,j,1] <-rownames(data.frame(prices[prices$t==round(opt$optim$bestmem[4])]))
+resmat[i,j,13] <- opt$optim$bestmem[1]
+resmat[i,j,14] <- opt$optim$bestmem[5]
+resmat[i,j,15] <- opt$optim$bestmem[2] 
+resmat[i,j,16] <- opt$optim$bestmem[6] 
+resmat[i,j,17] <-
+pt(-abs(opt$optim$bestmem[2]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))), length(prices$ylag))*2
+resmat[i,j,18] <-
+pt(-abs(opt$optim$bestmem[6]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[5])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[5])*prices$ylag))), length(prices$ylag))*2
+
+
+#ML TAR model with structural break and trend, save thresholds (thresholds before, after and common trend), adjustment speeds before and after the break and associated p-values
+normNLL = function(par) {
+     y.pred = (as.numeric((prices$t>par[4]))*as.numeric(abs(prices$ylag)>(par[1]+ par[7]*prices$t ))*(par[2]*(prices$ylag)) + (1-as.numeric(prices$t>par[4]))*as.numeric(abs(prices$ylag)>(par[5]+ par[7]*prices$t))*(par[6]*(prices$ylag))     )
+     -sum(dnorm(prices$dep,mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+opt <- DEoptim(normNLL, lower=c(quantile(abs(prices$ylag),0.1),-1,0.001,quantile(prices$t,0.1),quantile(abs(prices$ylag),0.1),-1,-0.01 ), upper=c(quantile(abs(prices$ylag),0.9),0,1000,quantile(prices$t,0.9), quantile(abs(prices$ylag),0.9),0,0.01),  control=list(itermax=200))
+struct[i,j,2] <-  rownames(data.frame(prices[prices$t==round(opt$optim$bestmem[4])]))
+resmat[i,j,19] <- opt$optim$bestmem[1]
+resmat[i,j,20] <- opt$optim$bestmem[5]
+resmat[i,j,21] <- opt$optim$bestmem[7]
+resmat[i,j,22] <- opt$optim$bestmem[2] 
+resmat[i,j,23] <- opt$optim$bestmem[6] 
+resmat[i,j,24] <-
+pt(-abs(opt$optim$bestmem[2]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[1])*prices$ylag))), length(prices$ylag))*2
+resmat[i,j,25] <-
+pt(-abs(opt$optim$bestmem[6]/sqrt(opt$optim$bestmem[3]*1/t(as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[5])*prices$ylag))%*%as.matrix(as.numeric(abs(prices$ylag)>opt$optim$bestmem[5])*prices$ylag))), length(prices$ylag))*2
+
+
+}
+save( struct, file="struct")
+save( resmat, file="resmat")
+
+}
+save( struct, file="struct")
+save( resmat, file="resmat")
+
+}
+
+save( struct, file="struct")
+save( resmat, file="resmat")
+
+
+

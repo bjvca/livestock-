@@ -1,0 +1,13 @@
+normNLL = function(par) {
+     y.pred = (abs(prices$ylag)>par[2]*(par[1]*abs(prices$ylag)) + (1-(abs(prices$ylag)>par[2]))*(abs(prices$ylag))  )
+     -sum(dnorm(abs(prices$dep),mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+ optim(par=c(1/100,50,1),normNLL, control = list(trace=1, ndeps=1))
+ 
+normNLL = function(par) {
+     y.pred = ((par[1]*(prices$ylag))  )
+     -sum(dnorm((prices$dep),mean=y.pred,sd=sqrt(par[3]),log=T)) }
+
+ optim(par=c(1/100,15,1),normNLL, control = list(trace=1, ndeps=1))
+
+sqrt(5.284985472*1/t(as.matrix(prices$ylag))%*%as.matrix(prices$ylag))
