@@ -802,7 +802,7 @@ p-value
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Loglik
 \end_layout
 
 \end_inset
@@ -873,6 +873,18 @@ Sexpr{round(resmat[3,2,2],digits=3)}
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,2,3],digits=1)}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -944,6 +956,18 @@ Sexpr{round(resmat[3,4,2],digits=3)}
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[3,4,3],digits=1)}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -960,7 +984,7 @@ Sexpr{round(resmat[3,4,2],digits=3)}
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -969,7 +993,7 @@ Kara - Shegole
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -990,7 +1014,7 @@ Sexpr{round(resmat[2,4,1], digits=3)}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1011,16 +1035,28 @@ Sexpr{sprintf("%1.3f", resmat[2,4,2])}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(resmat[2,4,3],digits=1)}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1041,7 +1077,7 @@ Sexpr{sprintf("%1.3f", resmat[2,4,2])}
 \begin_inset Caption
 
 \begin_layout Plain Layout
-results for addis
+results for addis AR1
 \end_layout
 
 \end_inset
