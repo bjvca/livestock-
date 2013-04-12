@@ -759,7 +759,7 @@ load("/home/bjvca/data/data/livestock/analysis/output/resmat")
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -894,7 +894,7 @@ Sexpr{round(resmat[3,2,3],digits=1)}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+10
 \end_layout
 
 \end_inset
@@ -977,7 +977,7 @@ Sexpr{round(resmat[3,4,3],digits=1)}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22
 \end_layout
 
 \end_inset
@@ -1060,7 +1060,7 @@ Sexpr{round(resmat[2,4,3],digits=1)}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+32
 \end_layout
 
 \end_inset
@@ -1078,6 +1078,37 @@ Sexpr{round(resmat[2,4,3],digits=1)}
 
 \begin_layout Plain Layout
 results for addis AR1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1144,7 +1175,7 @@ Northern Route
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1186,7 +1217,7 @@ Southern Route
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1218,6 +1249,12 @@ Southern trade route
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Shashemene is on the crossroads.
+ All southern market routes pass through Shashemene, which lies on the Cape
+ to Cairo highway.
 \end_layout
 
 \begin_layout Section*
