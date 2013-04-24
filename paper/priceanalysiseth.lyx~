@@ -756,10 +756,79 @@ load("/home/bjvca/data/data/livestock/analysis/output/resmat")
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Price-levels-in"
+
+\end_inset
+
+ shows time series of price data for cattle between 2006 up to 2011.
+ We find that, over the entire period, the price is highest in the Kera
+ market.
+ This is probably due to the location.
+ Kera clearly functions as a terminal market.
+ The difficulty to reach the market by suppliers due to its location in
+ a high density area creates a supply deficit that drives up the prices.
+ The prices in Shegola and Kara follow each other much closer, suggesting
+ they are better integrated with the national livestock market system.
+ Especially in 2010 and 2011, there are signs of a structural break in the
+ relationship between Kera and the other markets.
+ While before the price difference was high but constant over time, in 2010
+ and 2011 the difference seems to diverge.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/bjvca/data/data/livestock/analysis/output/addis_route_levels.pdf
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Price levels in three addis markets
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Price-levels-in"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -894,7 +963,7 @@ Sexpr{round(resmat[3,2,3],digits=1)}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+10
 \end_layout
 
 \end_inset
@@ -977,7 +1046,7 @@ Sexpr{round(resmat[3,4,3],digits=1)}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22
 \end_layout
 
 \end_inset
@@ -1060,7 +1129,7 @@ Sexpr{round(resmat[2,4,3],digits=1)}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+32
 \end_layout
 
 \end_inset
@@ -1078,6 +1147,37 @@ Sexpr{round(resmat[2,4,3],digits=1)}
 
 \begin_layout Plain Layout
 results for addis AR1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1144,7 +1244,7 @@ Northern Route
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1186,7 +1286,7 @@ Southern Route
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1218,6 +1318,12 @@ Southern trade route
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Shashemene is on the crossroads.
+ All southern market routes pass through Shashemene, which lies on the Cape
+ to Cairo highway.
 \end_layout
 
 \begin_layout Section*
