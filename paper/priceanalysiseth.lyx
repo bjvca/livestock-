@@ -594,6 +594,7 @@ reference "fig:Map-with-locations"
 \end_inset
 
  shows the markets that have been included in the analysis.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -601,9 +602,12 @@ Addis Ababa (A) actually masks 3 of the 4 official different livestock markets
  in the capital.
  Kara, in Yeka District, Kera, in Kirkos District; and Shegole livestock
  market centre, located on Ambo Road, in Gullele District.
- Further to the East is the livestock market of Were at about 265 km from
- Addis.
  
+\end_layout
+
+\begin_layout Standard
+In addition to the markets in the capital, we also capture markets in the
+ main livestock trade axis, that runs from the South to the East.
 \end_layout
 
 \begin_layout Standard
@@ -1244,7 +1248,7 @@ Northern Route
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
